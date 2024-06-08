@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            #btn{
+                height: 30px;
+                width: 80px;
+                background-color: rgb(54, 54, 247);
+                color: white;
+                border-radius: 5px;
+                align-items: center;
+                
+            }
+            h2{
+                color:red;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2> Toggle Button to showtrue/false</h2>
+       <center> <button id="btn" onclick="toggle()">Toggle</button>:<span id="spn"></span></center>
+        
+        <script>
+            function toggle(){
+               if(document.getElementById("spn").innerHTML==="true"){
+                document.getElementById("spn").innerHTML="false";
+               }
+               else{
+                // document.getElementById("spn").innerHTML="true"
+                document.getElementById("spn").innerHTML="true";
+               }
+            }
+        </script>
+    </body>
+</html>

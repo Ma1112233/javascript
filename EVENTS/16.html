@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            img{
+                height: 300px;
+                width:400px;
+            }
+        </style>
+    </head>
+    <body>
+        <img onclick="toggleimage(event)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuM4akFQx6_keTpRbTpRAKsmbiqxx09JOLkw&s" alt="1" id="im">
+        <script>
+            var ar=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuM4akFQx6_keTpRbTpRAKsmbiqxx09JOLkw&s",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvwWYgI87Sp7LfaBEHrzcRaf6u7RnL3Tr4Bw&s",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi1Vbnyc94a2l-7WE80zSP5iTu2c2rKoKKFg&s",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFPpc8X7Hri0mkHQMFhFqDkgMi1azQvbpmQ&s",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDfMwwjDU0zOUzDjUs9QzGGug97kIUDLUBXg&s                           "
+            ]
+            var i=0;
+            // document.getElementById("im").style.src=ar[i]
+            function toggleimage(ev){
+                // console.dir(ev)
+                 var img=document.getElementById("im")
+                img.src=ar[i]
+                i++;
+                if(i===ar.length-1){
+                    i=0
+                }
+            }
+        </script>
+    </body>
+</html>
+<!-- <div id="dv" onclick="togglecolor()"></div>
+        <script>
+             var ar=["green","red","blue","orange","yellow"];
+             var i=0;
+             document.getElementById("dv").style.backgroundColor=ar[i];
+            function togglecolor(){
+               document.getElementById("dv").style.backgroundColor=ar[i]
+               i++;
+               if(i===5){
+                i=0;
+            } -->

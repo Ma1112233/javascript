@@ -1,0 +1,114 @@
+<html>
+    <head></head>
+    <body>
+        <table border="2px">
+            <tbody id="male"></tbody>
+            <thead>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>city</th>
+                <th>salary</th>
+            </thead>
+        </table>
+        <br>
+        <table border="2px">
+            <tbody id="female"></tbody>
+            <thead>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>city</th>
+                <th>salary</th>
+            </thead>
+        </table>
+        <script>
+             var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+                        people.forEach(function(a){
+                    var fnr=document.createElement("tr")
+                    var ftd=document.createElement("td")
+                    ftd.innerHTML=a.firstname
+                    fnr.appendChild(ftd)
+
+                    var ltd=document.createElement("td")
+                    ltd.innerHTML=a.lastname
+                    fnr.appendChild(ltd)
+
+                    var agtd=document.createElement("td")
+                    agtd.innerHTML=a.age
+                    fnr.appendChild(agtd)
+                    
+                    var gtd=document.createElement("td")
+                    gtd.innerHTML=a.gender
+                    fnr.appendChild(gtd)
+                    
+                    var ctd=document.createElement("td")
+                    ctd.innerHTML=a.city
+                    fnr.appendChild(ctd)
+                    
+                    var std=document.createElement("td")
+                    std.innerHTML=a.salary
+                    fnr.appendChild(std)
+                    
+                    if(a.gender=="male"){
+                        document.getElementById("male").appendChild(fnr)
+                    }
+                    else{
+                        document.getElementById("female").appendChild(fnr)
+                    }
+
+                 })
+        </script>
+    </body>
+</html>

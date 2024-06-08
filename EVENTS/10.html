@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            #dv{
+                height: 200px;
+                width: 300px;
+                border: 2px solid;
+                
+            }
+            button{
+                height: 40px;
+                width:60px;
+                background-color: rgb(222, 194, 12);
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div id="dv"></div>
+        <br>
+        
+        <button id="bt" onclick="mm()">Toggle</button>
+    </center>
+        <script>
+            function mm(){
+                // document.getElementById("dv").style.backgroundColor="yellow";
+                if(document.getElementById("dv").style.backgroundColor==="yellow"){
+                    document.getElementById("dv").style.backgroundColor=""
+            }
+            else{
+                document.getElementById("dv").style.backgroundColor="yellow"
+            }
+        }
+        </script>
+    </body>
+</html>

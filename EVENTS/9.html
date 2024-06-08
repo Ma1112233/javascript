@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            div{
+                height: 200px;
+                width:200;
+                border: 2px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div id="dv"></div>
+        <button id="nn"  onclick="on(event)">On</button>
+        <button id="ff" onclick="of(event)">Off</button>
+    </center>
+        <script>
+            function on(ev){
+                document.getElementById("dv").style.backgroundColor="yellow";
+                ev.target.style.backgroundColor="red"
+                ev.target.nextElementSibling.style.backgroundColor=""
+                
+                }
+            function of(mv){
+                document.getElementById("dv").style.backgroundColor=""
+                mv.target.style.backgroundColor="red"
+                mv.target.previousElementSibling.style.backgroundColor=""
+                
+                
+            }
+        
+            
+            
+        </script>
+    </body>
+</html>

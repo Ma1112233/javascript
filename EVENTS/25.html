@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <style>
+            #dv{
+                border: 2px solid;
+                width: 500px;
+                height: 500px;
+            }
+        </style>
+    </head>
+        <body>
+            <div id="dv"></div>
+            <ul id="lll"></ul>
+            <form  onsubmit="showdata(event)">
+            <table border="2px">
+                <tbody id="tbl">
+                    <tr>
+                        <td>fitst Name:</td>
+                        <td> <input type="text" onkeyup="addname(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" onkeyup="addlname(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth:</td>
+                        <td>
+                            <input type="date" onchange="adddob(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td> <input type="radio" name="Gender" value="Male" onchange="updategender(event)">:Male
+                           <input type="radio" name="Gender" value="Female" onchange="updategender(event)">:Female
+                            <input type="radio" name="Gender" value="Other" onchange="updategender(event)">:Other
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Technologies</td>
+                        <td>
+                            
+                            <input type="checkbox" value="Java" onchange="add(event)">Java
+                            <input type="checkbox" value="Python" onchange="add(event)">Python
+                            <input type="checkbox" value="JavaScript" onchange="add(event)">JavaScript
+                            <input type="checkbox" value="Angular" onchange="add(event)">Angular
+                            <input type="checkbox" value="React" onchange="add(event)">React
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td>
+                            <select onchange="selectcountry(event)">
+                                <option value="">Russia  </option>
+                                <option value="">India</option>
+                                <option value="">Srilanka</option>
+                                <option value="">U.S.A</option>
+                                <option value="">japan</option>
+                                <option value="">Chaina</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Comments</td>
+                        <td><input type="text" onkeyup="connment(event)"></td>
+                    </tr>
+                    <tr >
+                          <td colspan="2"><button>Submit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </form>
+            <script>
+               var ar=[];
+               var firstname=" ";
+               var lastname=" ";
+               var dob=" ";
+               var gender=" ";
+               var Country=""
+               var check=[]
+               function addname(ev){
+                firstname=ev.target.value;
+               }
+               function addlname(ev){
+                lastname=ev.target.value;
+               }
+               function adddob(ev){
+                dob=ev.target.value;
+               }
+               function updategender(ev){
+                gender=ev.target.value;
+               }
+               function add(ev){
+                var t=ev.target.value;
+                if(ev.target.checked===true){
+                    check.push(t)
+                }
+                else{
+                    check=check.filter(function(a){
+                        if(t===a){
+                            return false;
+                        }
+                        else{
+                            return true;
+                        }
+                    })
+                }
+                check.forEach(function(b){
+                    
+                })
+               }
+               function selectcountry(ev){
+                var c=ev.target.value;
+               }
+               function connment(ev){
+                var cm=ev.target.value
+               }
+               function showdata(ev){
+                ev.preventDefault();
+                var details={
+                    Firstname:firstname,
+                    Lastname:lastname,
+                    pdob:dob,
+                    Gender:gender,
+                    carr:check
+                   
+                }
+                //  console.log(details)
+                ar.push(details);
+                console.log(ar)
+             gendata()
+            
+               function gendata(){
+                 ar.forEach(function(v){
+                    document.body.innerHTML=JSON.stringify(v)
+                //    console.log(v)
+                //    document.getElementById("dv").appendChild(ar)
+                //    document.body.appendChild(ev)
+                // nli=document.createElement("li")
+                // nli.innerHTML=v.Firstname
+                // nli.innerHTML=v.Lastname
+                // nli.innerHTML=v.Gender
+                // nli.innerHTML=v.pdob
+                // nli.innerHTML=v.Gender
+                // nli.innerHTML=v.carr
+                // document.getElementById("lll").appendChild(nli)
+                 })
+               }
+             }
+            //    document.body.appendChild(ar)
+
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,52 @@
+<html>
+    <head>
+
+    </head>
+      <body>
+        <input type="checkbox" onchange="add(event)" value="manikanta">:manikanta
+        <input type="checkbox" onchange="add(event)" value="venky">:venky
+        <input type="checkbox" onchange="add(event)" value="jack">:jack
+        <input type="checkbox" onchange="add(event)" value="jaggu">:jaggu
+        <input type="checkbox" onchange="add(event)" value="sai">:sai
+        <input type="checkbox" onchange="add(event)" value="subbu">:subbu
+        <input type="checkbox" onchange="add(event)" value="suri">:suri
+        <input type="checkbox" onchange="add(event)" value="sanker">:sanker
+        <input type="checkbox" onchange="add(event)" value="sandy">:sandy
+        <input type="checkbox" onchange="add(event)" value="lucky">:lucky
+        <input type="checkbox" onchange="add(event)" value="prasad">:prasad
+        <input type="checkbox" onchange="add(event)" value="mahesh">:mahesh
+        <ul id="d1"></ul>
+        <script>
+            var sltech=[];
+            function add(ev){
+                document.getElementById("d1").innerHTML="";
+                // console.log(ev.target.checked)
+                var t=ev.target.value;
+                console.log(t)
+                if(ev.target.checked===true){
+                    sltech.push(t);
+                    console.log(sltech)
+                }
+               
+                else{
+                    sltech=sltech.filter(function(tech){
+                        if(t===tech){
+                            return false;
+                        }
+                        else{
+                            return true;
+                        }
+                    })
+                        
+                }
+                sltech.forEach(function(tech){
+                           tli=document.createElement("li");
+                             tli.innerHTML=tech
+                            document.getElementById("d1").appendChild(tli)
+                        
+                    })
+             }
+            // console.log(sltech)
+        </script>
+      </body>
+</html>

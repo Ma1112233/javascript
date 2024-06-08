@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <style>
+            img{
+                height:200px;
+                width: 300px;
+            }
+            #dv{
+                border: 2px solid;
+                height: 200px;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <img  onclick="img1(event)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPEjWBryUDwTOelfnjOsXEoIT4NizHMb5SXA&s" alt="">
+<img onclick="img1(event)"  src="https://stat.overdrive.in/wp-content/odgallery/2022/08/63812_2022_Honda_CB300F_DLX_PRO_1_468x263.jpg" alt="">
+<img onclick="img1(event)"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzl8445m3U6jjZ2fx2LEUrItfe9DdgH1zkg&s" alt="">
+<br>
+<br>
+<br>
+<br>
+        <div id="dv"><img id="im" src="" alt=""></div>
+        </center>
+      <script>
+        function img1(ev){
+            
+           var a= document.getElementById("im")
+           a.src=ev.target.src    
+        }
+        </script>
+    </body>
+</html>

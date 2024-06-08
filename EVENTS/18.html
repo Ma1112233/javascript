@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            div{
+                border: 2px solid;
+                height:200px;
+                width:300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="dv" ></div>
+        <button onclick="rdd(event)">red</button>
+        <button onclick="grn(event)">green</button>
+        <button onclick="bl(event)">blue</button>
+        <button onclick="ylw(event)">yellow</button>
+        <button onclick="blk(event)">black</button>
+        <button onclick="rst(event)">reset</button>
+        <script>
+            function rdd(av){
+                document.getElementById("dv").style.backgroundColor="red";
+            }
+
+            function grn(bv){
+            document.getElementById("dv").style.backgroundColor="green";
+            }
+
+            function bl(cv){
+            document.getElementById("dv").style.backgroundColor="blue";
+            }
+            function ylw(dv){
+            document.getElementById("dv").style.backgroundColor="yellow";
+            
+            }
+            function blk(ev){
+            document.getElementById("dv").style.backgroundColor="black";
+            }
+            function rst(fv){
+            document.getElementById("dv").style.backgroundColor="";
+            }
+        </script>
+    </body>
+</html>

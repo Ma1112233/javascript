@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            #dv{
+                width:400px;
+                height:400;
+                border: 2px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="dv"></div>
+        <button onclick="vlc()">violet</button>
+        <button onclick="blu()">blue</button>
+        <button onclick="grn()">green</button>
+        <button onclick="yelw()">yellow</button>
+        <button onclick="org()">orange</button>
+        <button onclick="rd()">red</button>
+        <script>
+            function vlc(){
+                document.getElementById("dv").style.backgroundColor="#3F0D7C";
+            }
+            function blu(){
+                document.getElementById("dv").style.backgroundColor="blue";
+            }
+            function grn(){
+                document.getElementById("dv").style.backgroundColor="green";
+            }
+            function yelw(){
+                document.getElementById("dv").style.backgroundColor="yellow";
+            }
+            function org(){
+                document.getElementById("dv").style.backgroundColor="orange";
+            }
+            function rd(){
+                document.getElementById("dv").style.backgroundColor="red"
+            }
+        </script>
+    </body>
+</html>

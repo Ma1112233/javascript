@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function rev(a){
+                var reverse=0;
+                    var rem;
+                while(a>0){
+                    rem=a%10;
+                    reverse=reverse*10+rem;
+                    a=parseInt(a/10);
+                }
+                
+                if(reverse==121){
+                    console.log("palidrome")
+                }
+                else{
+                    console.log("not a palidrome")
+                }
+                return reverse;
+            }
+            
+            var a=rev(121)
+                console.log(a)
+        </script>
+    </body>
+</html>

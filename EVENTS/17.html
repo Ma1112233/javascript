@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            #dv{
+                border: 2px solid;
+                width:200px;
+                height:200px;
+            }
+            img{
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div id="dv">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqkE3uS5ZwBirF00pB27HKQv0AsVVkBRMeew&s" alt="" id="im"></div>
+            <br>
+            <br><br>
+            
+        <button onclick="next(event)">next</button>
+        <button onclick="prev(event)">preview</button>
+        
+    </center>
+        <script>
+            var i=0;
+            var ar=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqkE3uS5ZwBirF00pB27HKQv0AsVVkBRMeew&s",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_i5co2ycfv3N0Hpekn8CdWMW8YREDjAgyQ&s",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAl8eXkjSG917H_K0dtCSigo9fDyvRdT1uxw&s",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYaZFUM97FSr0UOtj4J_G9zVyfGHSuUQ5tNA&s",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkm-AZirSQNrESUWeRYiy7JoJaAsMq3njQnQ&s"
+            ]
+            function next(ev){
+               var imgg= document.getElementById("im")
+               document.getElementById("dv").appendChild(imgg)
+               
+              if(i==ar.length){
+                i=0;
+              }
+                imgg.src=ar[i++];
+            }
+            function prev(ev){
+               var a= document.getElementById("im");
+               document.getElementById("dv").appendChild(a)
+               if(i==0){
+                i=ar.length-1;
+               } 
+                a.src=ar[--i];
+            }
+        </script>
+    </body>
+</html>

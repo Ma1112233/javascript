@@ -1,0 +1,72 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="ll"></ul>
+        <script>
+            
+             var students = [
+                                {
+                                name:'jaya',
+                                gender:'female',
+                                place:'gachibowli',
+                                },
+                                {
+                                name:'dasu',
+                                gender:'male',
+                                place:'kphb'
+                                },
+                                {
+                                name:'swati',
+                                gender:'female',
+                                place:'pune'
+                                },
+                                {
+                                name:'pallavi',
+                                gender:'female',
+                                place:'assam'
+                                },
+                                {
+                                name:'kiran',
+                                gender:'male',
+                                place:'kondapur'
+                                },
+                                {
+                                name:'thirumala',
+                                gender:'male',
+                                place:'madhapur'
+                                },
+                                {
+                                name:'priya',
+                                gender:'female',
+                                place:'hitech'
+                                },
+                            ]
+                        students.forEach(function(a){
+                            var unl=document.createElement("li")
+                            unl.innerHTML=a.name
+                            
+                            var nol=document.createElement("ul")
+                            var gli=document.createElement("li")
+                               gli.innerHTML=a.gender
+                               nol.appendChild(gli)
+
+                               var pli=document.createElement("li")
+                               pli.innerHTML=a.place
+                               nol.appendChild(pli)
+
+                               unl.appendChild(nol)
+
+                            document.getElementById("ll").appendChild(unl)
+                    
+                            // console.dir(unl)
+                            if(a.gender=="female"){
+                            unl.style.background="pink"
+                        }
+                        else{
+                            unl.style.background="skyblue"
+                        }
+                        })
+                       
+        </script>
+    </body>
+</html>

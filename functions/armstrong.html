@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+             
+            function armstrong(a){
+                var rem;
+                var sum=0;
+                var temp=a;
+                while(a>0){
+                    rem=a%10;
+                    var b=Math.pow(rem,3)
+                    sum=sum+b;
+                    a=parseInt(a/10)
+                }
+                
+                if(temp==sum)
+                {
+                    console.log( sum+"::armstrong number")
+        
+                }
+                else{
+                    console.log(sum+"not a armsgrong number")
+                }
+            
+            }   
+            armstrong(153)
+        
+                                          // 153,370,371,407
+        </script>
+    </body>
+</html>

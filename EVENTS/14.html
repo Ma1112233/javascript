@@ -1,0 +1,93 @@
+<html>
+    <head>
+    <style>
+        #mm{
+            height: 100%;
+            width: 100%;
+            display:flex;
+            padding-left: 30px;
+        }
+        #ims{
+            height: 30px;
+            width: 250px;
+        }
+       
+        button{
+            height: 40px;
+            width: 90px;
+            font-size: 15px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: whitesmoke;
+            background-color: red;
+            border-radius: 15px;
+            border:none
+        }
+        body{
+            background-color: rgb(205, 248, 205)
+        }
+        #im{
+            height: 300px;
+            width: 400px;
+        }
+    </style>
+    </head>
+    <body>
+        <center>
+            <h1>Show Images using Url</h1>
+            <br>
+        
+        <b>Enter image URL:</b>
+    <input type="search" id="ims">
+    <br>
+    <br>
+        <button onclick="clk(event)" id="btn">search</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        
+        <!-- <img src="" alt="" id="im"> -->
+        
+    </center>
+    <div id="mm"></div>
+        <script>
+        
+            var ar=[]
+            function clk(ev){
+               b=document.getElementById("ims").value
+               ar.push(b)
+               console.dir(ar)
+                //blank .innerHTML used remove duplicates in array
+               document.getElementById("mm").innerHTML="";
+               ar.forEach(function(a){
+                var im=document.createElement("img");
+                im.style.padding="20px";
+                im.style.height="200px";
+                im.style.width="200px"
+                
+                var dv=document.createElement("div")
+                dv.style.border="2px solid"
+                dv.style="inline-block"
+                im.src=a;
+                dv.appendChild(im)
+                
+                document.getElementById("mm").appendChild(dv)
+                // console.dir(a)
+                
+               })
+            }
+            
+             
+           
+            // console.dir(ar)
+        </script>
+    </body>
+</html>
+<!-- nimg.src=a
+dv.style.display="inline-block"
+dv.style.padding="10px"
+nimg.style.width="200px"
+dv.appendChild(nimg)
+document.body.appendChild(dv) -->
+

@@ -1,0 +1,55 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+           function number(num){
+                var count=0;
+                var sum=0;
+                for(var i=1;i<=num;i++){
+                    if(num%i==0){
+                        count=count+1;
+                        sum=sum+i
+                    }
+                }
+                if(count==2){
+                    console.log("prime number")
+                }
+                // return "prime";
+            
+                var arm=0;
+                var temp=num;
+            let Str=num.toString();
+            var ndg=Str.length;
+            while(num>0){
+                rem=num%10;
+            var sq=rem**ndg
+            arm=arm+sq; 
+                num=parseInt(num/10) 
+              
+            }
+            if(temp==arm){
+                console.log(arm+"::armstrong number")
+            }
+        }
+            function number(){
+            for(var i=1;i<num;i++){
+                if(num%i==0){
+                sum=sum+i;
+                console.log(sum)
+                }
+                
+            }
+           
+            if(num==sum){
+                console.log(sum+"::perfect number")
+            }
+            // return sum;
+        }
+    
+                
+            
+        number(496);
+        // console.log(d)
+        </script>
+    </body>
+</html>

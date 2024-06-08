@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            #dv{
+                border: 2px solid;
+                height: 300px;
+                width:300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="dv" onclick="togglecolor()"></div>
+        <script>
+             var ar=["green","red","blue","orange","yellow"];
+             var i=0;
+             document.getElementById("dv").style.backgroundColor=ar[i];
+            function togglecolor(){
+               document.getElementById("dv").style.backgroundColor=ar[i]
+               i++;
+               if(i===5){
+                i=0;
+            }
+            }
+            
+           
+        </script>
+    </body>
+</html>

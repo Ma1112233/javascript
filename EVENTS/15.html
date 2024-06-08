@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+        h1{
+            color: red;
+        }
+        button{
+            background-color: brown;
+            color:whitesmoke;
+            border: none;
+            
+        }
+           
+        </style>
+    </head>
+    <body>
+        
+        <h1>Add Students</h1>
+        <input type="text"   id="bx">
+        <button onclick="clk(event)">submit</button>
+        <br><br>
+        <ul id="unl"></ul>
+        </ul>
+    
+        <script>
+            function clk(ev){
+                var x= document.getElementById("bx")
+                var ll=document.createElement("li")
+                console.dir(ll)
+                ll.innerHTML=x.value
+                document.getElementById("unl").appendChild(ll)
+            }
+        </script>
+    </body>
+</html>

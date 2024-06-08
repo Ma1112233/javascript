@@ -1,0 +1,67 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Time:<span id="min"></span><span id="sec"></span><span id="milli"></span></h1>
+        
+        <button onclick="start(event)">Start</button>
+        <button onclick="reset(event)">Reset</button>
+        <button onclick="stop(event)">Stop</button>
+        <script>
+             var millisec=0;
+            var seconds=0;
+            var minutes=0;
+        
+            function start(ev){
+
+            var mil=setInterval(function(){
+                millisec++;
+                if(millisec==10){
+                    millisec=0;
+                }
+                var mi=document.getElementById("millisec")
+                mi.innerHTML=":"+millisec
+            },100)
+            
+            var s=setInterval(function(){
+                seconds++;
+                if(seconds==60){
+                    
+                    seconds=0;
+                
+                }
+                var sec=document.getElementById("sec")
+                sec.innerHTML=":"+seconds
+                
+            },1000)
+            
+        
+        }
+       
+            var m=setInterval(function(){
+                    minutes++;
+                if(minutes==60){
+                     minutes=0;
+                }
+                var min=document.getElementById("min")
+                min.innerHTML=":"+minutes
+                },60000)
+            
+            // var h=setInterval(function(){
+            //          hours++;
+            //     if(hours==24){
+            //         hours=0;
+            //     }
+            //     var hur=document.getElementById("hr")
+            //     hur.innerHTML=""+hours
+            // },1000)
+                
+            
+            function reset(ev){
+                document.getElementById("sec").innerHTML=null
+
+            }
+        </script>
+    </body>
+</html>

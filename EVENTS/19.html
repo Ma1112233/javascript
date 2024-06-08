@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <style>
+            /* #dv{
+                height: 200px;
+                width:200px;
+                border: 2px solid;
+            } */
+            /* #maindiv{
+                border: 2px solid;
+                height:500px;
+                width: 500px;
+            } */
+            /* #maindiv{
+                border: 2px solid;
+                height:500px;
+                width: 500px;
+            } */
+        </style>
+    </head>
+    <body>
+        
+        <h1>Add Contact Cards</h1>
+        <br>
+        <form onsubmit="showdata(event)">
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" onkeyup="addname(event)" required id="dnm"><br><br>
+        <label for="">Number:</label>
+        <input type="number" id="num" onkeyup="addnumber(event)"><br><br>
+        <label >Email:</label>
+        <input type="email" placeholder="mm@.gmail.com" id="ml" onkeyup="addemil(event)"><br><br>
+        <label >Enter Image Url:</label>
+        <input type="text" id="sch" onchange="clkk(event)"><br><br><br>
+        <button type="submit" onclick="sub(event)">Add Contact</button>
+    </form>
+    
+     <!-- <img src="" alt="" id="imm"> -->
+     <!-- <ul id="ll"></ul> -->
+     <div id="maindiv"></div>
+     <h1><span id="spn"></span></h1>
+        <script>
+            var i=0;
+            var persons=[];
+            var name=" ";
+            var number=" ";
+            var email=" ";
+            var image=" ";
+            function addname(ev){
+                name=ev.target.value;
+            }
+            function addnumber(ev){
+                number=ev.target.value;
+            }
+            function addemil(ev){
+                email=ev.target.value;
+            }
+            function clkk(ev){
+                image=ev.target.value;
+                console.log(ev)
+            }
+            function showdata(a){
+                a.preventDefault();
+                var per={
+                    name:name,
+                    number:number,
+                    email:email,
+                    image:image
+                    
+                }
+                    persons.push(per)
+                   console.log(persons)
+                  
+                
+            }
+            function sub(ev){
+                gendata()
+            }
+                function gendata(){
+                    document.getElementById("maindiv").innerHTML=" ";
+                    persons.forEach(function(m){
+                        
+
+                    var dvv=document.createElement("div")
+                    dvv.style.border="2px solid"
+                    dvv.style.height="200px"
+                    dvv.style.width="200px"
+                    dvv.style.display="inline-block"
+                    dvv.style.margin="10px"
+                    
+                    
+
+                    var nimg=document.createElement("img")
+                        nimg.src=m.image
+                        dvv.appendChild(nimg) 
+                        nimg.style.width="80px";
+                        nimg.style.height="80px";
+                         nimg.style.ali="center"
+                         nimg.style.marginLeft="60px"
+                         nimg.style.marginTop="20px"
+                    //    nimg.style.paddingRight="40px"
+                         nimg.style.borderRadius="50px"
+                        
+
+                    var nml=document.createElement("li")
+                    nml.innerHTML= "Name : "+m.name
+                    nml.style.listStyle="none"
+                    nml.style.padding="5px";
+                    nml.style.textAlign="center"
+                    dvv.appendChild(nml)
+                    
+
+                    var numl=document.createElement("li")
+                        numl.innerHTML="Number:"+m.number
+                        numl.style.listStyle="none"
+                        numl.style.padding="5px"
+                        numl.style.textAlign="center"
+                        dvv.appendChild(numl)
+                    
+                        var eml=document.createElement("li")
+                        eml.innerHTML="Email:"+m.email
+                        eml.style.listStyle="none"
+                        eml.style.padding="5px"
+                        eml.style.textAlign="center"
+                        dvv.appendChild(eml)
+
+                document.getElementById("maindiv").appendChild(dvv)
+
+                   })
+                }
+            
+       
+
+        
+        </script>
+    </body>
+</html>
+

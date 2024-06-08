@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            button{
+                width:200px;
+                height: 100px;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="Togglecolor()" id="gr">white</button>
+        <!-- <button onclick="wht()">red</button> -->
+        <script>
+            function Togglecolor(){
+                // document.getElementById("gr").style.backgroundColor=="";
+
+                if(document.getElementById("gr").style.backgroundColor===""){
+                    document.getElementById("gr").style.backgroundColor="green";
+                    document.getElementById("gr").innerHTML="green"
+                }
+                else{
+                    
+                    document.getElementById("gr").style.backgroundColor="";
+                    document.getElementById("gr").innerHTML="white";
+                }
+            }
+        
+        </script>
+    </body>
+</html>

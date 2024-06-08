@@ -1,0 +1,28 @@
+<html>
+    <head>
+    <style>
+        #mm{
+            height:50px;
+            width: 80px;
+        }
+        button{
+            font-size: 30px;
+            border-radius: 15px;
+        }
+    </style>
+    </head>
+     <body>
+        <button onclick="btn()" id="mm">On</button>
+        <script>
+            function btn(){
+                
+                if(document.getElementById("mm").innerHTML==="On"){
+                document.getElementById("mm").innerHTML="Off";
+                }
+                else{
+                document.getElementById("mm").innerHTML="On";
+                  }
+                }
+        </script>
+     </body>
+</html>

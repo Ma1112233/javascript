@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            #dv{
+                height: 200px;
+                width: 400px;
+                border: 2px solid;
+                font-size: 50px;
+                text-align: center;
+                padding-top: 50px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            #bb{
+                height: 50px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="dv">im nothing</div>
+        <br>
+        <button onclick="btn()" id="bb">On/Off</button>
+        
+        <script>
+            function btn(){
+                if(document.getElementById("dv").innerHTML==="true"){
+                    document.getElementById("dv").innerHTML="false";
+                }
+                else{
+                    document.getElementById("dv").innerHTML="true";
+                }
+            }
+        </script>
+    </body>
+</html>

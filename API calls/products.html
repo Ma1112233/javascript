@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #d1 li{
+                border: 1px solid;
+                margin: 10px;
+                list-style: none;
+                text-align: center;
+                box-shadow: 1px 2px 2px 2px;
+    
+                background-color:white;
+            }
+            #d1 li img{
+                width: 200px;
+            }
+            body{
+                background-color: rgb(205, 202, 202);
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="d1">
+
+        </ul>
+        <script>
+            fetch("https://fakestoreapi.in/api/products")
+             .then(function(res){
+                res.json().then(function(data){
+                     console.log(data)
+                data.products.forEach(function(x){
+                    // console.log(x)
+                    var nli=document.createElement("li");
+                    var imgg=document.createElement("img");
+                    imgg.src=x.image
+                    nli.appendChild(imgg)
+
+                    var prname=document.createElement("h3");
+                    prname.innerHTML="Title :"+x.title.slice(0,10)
+                    nli.appendChild(prname)
+
+                    var brname=document.createElement("h4");
+                    brname.innerHTML="Brand :"+x.brand;
+                    nli.appendChild(brname)
+
+                    var prc=document.createElement("h3");
+                    prc.innerHTML="Price :"+x.price;
+                    nli.appendChild(prc)
+
+                    document.getElementById("d1").appendChild(nli)
+                  })
+                }) 
+             })
+        </script>
+    </body>
+</html>

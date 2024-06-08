@@ -1,0 +1,44 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var marks = {
+                                "maths" : 34,
+                                "english" : 56,
+                                "science": 32,
+                                "hindi" : 75,
+                                "social science": 65
+                            };
+                            var count=0;
+                            var total=500;
+                            var sum=0;
+                            for(var i in marks){
+                                console.log(marks[i])
+                                
+                            }
+                            for(var i in marks){
+                                console.log(i) 
+                            }
+                            for(var a in marks){
+                                count=count+1
+                            }
+                            console.log(count)
+                            for(var b in marks){
+                                sum=sum+marks[b]
+                            }
+                            console.log(sum)
+                            var percentage = (sum/total)*100;
+                            console.log(percentage);
+                    
+                            // 5 que
+                            for(var c in marks){
+                                if(marks[c]>35)
+                                console.log(c)
+                            }
+                            // 6que
+                           
+                           
+                            
+        </script>
+    </body>
+</html>
