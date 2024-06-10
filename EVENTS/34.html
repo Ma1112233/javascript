@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            #dv{
+                width: 800px;
+                height: 40px;
+                border: 2px solid;
+            }
+        </style>
+        <body>
+            <div id="dv"></div>
+            <button onclick="start(event)">start</button>
+            <button onclick="stop(event)">stop</button>
+            <button onclick="reset(event)">reset</button>
+        </body>
+        <script>
+            var fill;
+            var width=1;
+            fill=setInterval(function(){
+               var w= document.getElementById("dv").width
+                document.w.style.backgroundColor="red"
+                if(width==8000){
+                    width=0
+                }
+                
+
+            },2000)
+        </script>
+    </head>
+</html>

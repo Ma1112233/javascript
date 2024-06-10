@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            #dv{
+                border: 2px solid;
+                width: 300px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="dv">
+            <h1><span id="score">00</span>/ <span id="wickets">0</span></h1>
+        </div>
+        <button onclick="abc(1)" >one</button>
+        <button onclick="abc(2)">two</button>
+        <button onclick="abc(3)">three</button>
+        <button onclick="abc(4)">four</button>
+        <button onclick="abc(6)">six</button>
+        <button onclick="wicket(event)">wicket</button>
+        <script>
+            // var ar=[];
+            var sum=0
+            var on=1;
+            var to=2;
+            var thr=3;
+            var fr=4;
+            var s=6;
+            var wick=0;
+             function abc(ev){
+                sum=sum+ev
+               var a= document.getElementById("score").innerHTML=sum
+               
+             }  
+             function wicket(ev){
+                wick=wick+1
+                document.getElementById("wickets").innerHTML=wick
+                
+             }
+             
+        </script>
+    </body>
+</html>
