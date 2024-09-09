@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="dv"></div>
+
+        <script type="text/babel">
+
+            var player1={
+                name:'manikanta',
+                score:0,
+                service:false,
+                sets:0
+            }
+            var player2={
+                name:'prasanth',
+                score:0,
+                service:true,
+                sets:0
+            }
+            function pl1(){
+                player1.score++;
+                player1.service="true";
+
+                (player1.service=="true")?player2.service="false":none;
+
+                ui()
+            }
+            function pl2(){
+                player2.score++;
+                player2.service="true";
+                (player2.service=="true")?player1.service="false":none;
+                ui()
+            }
+
+
+            function ui(){
+
+                var d= <div>
+                <table border="2" cellspacing="0" cellpadding="10px">
+                    <thead>
+                        <th>PlayerName</th>
+                        <th>Service</th>
+                        <th>S1</th>
+                        <th>S2</th>
+                        <th>S3</th>
+                        </thead>
+                    <tr>
+                        <td>{player1.name}</td>
+                        <td>{player1.service}</td>
+                        <td>{player1.score}</td>
+                        <td>set2</td>
+                        <td>set3</td>
+                        </tr>
+                    <tr>
+                        <td>{player2.name}</td>
+                        <td>{player2.service}</td>
+
+                        <td>{(player2.score)}</td>
+                        <td>set2</td>
+                        <td>set3</td>
+                        </tr>
+                    </table>
+
+                    <button onClick={pl1}>p1</button>
+                    <button onClick={pl2}>p2</button>
+                
+                </div>
+                ReactDOM.render(d,document.getElementById("dv"))
+
+            }
+            ui()
+                    </script>
+    </body>
+</html>
